@@ -6,7 +6,13 @@ namespace Assignment0
     {
         public static void Main(string[] args)
         {
-            
+            var input = int.Parse(Console.ReadLine());
+            if(IsLeapYear(input)){
+                Console.WriteLine("yay");
+            }
+            else{
+                Console.WriteLine("nay");
+            }
         }
 
         public static bool IsLeapYear(int year){
