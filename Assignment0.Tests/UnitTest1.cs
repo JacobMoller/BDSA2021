@@ -17,7 +17,8 @@ namespace Assignment0.Tests
         }
 
         [Fact]
-        public void Input1900ToConsole_False(){
+        public void Input1900ToConsole_False()
+        {
             var writer = new StringWriter();
             Console.SetOut(writer);
             var input = new StringReader("1900");
@@ -29,5 +30,24 @@ namespace Assignment0.Tests
 
             Assert.Equal("nay", output);
         }
+
+        /*
+        Check that is occurs once
+        [Fact]
+        public void InputIsStringHandleError(){
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+            var input = new StringReader("hej");
+            Console.SetIn(input);
+
+            Program.Main(new string[0]);
+
+            var output = writer.GetStringBuilder().ToString().Trim();
+            
+            var input2 = new StringReader("12");
+            Console.SetIn(input2);
+
+            Assert.Equal("Not a number. Try again:", output);
+        }*/
     }
 }
